@@ -137,6 +137,9 @@ a {
   width: 70px;
   height: 70px;
   background-color: #00bfc5;
+  box-shadow: 0 13px 27px -5px rgba(1, 117, 121, 0.25),
+    0 8px 16px -8px rgba(7, 128, 133, 0.3),
+    0 -6px 16px -6px rgba(0, 44, 46, 0.025);
 }
 
 .days__item--selected .item__day {
@@ -150,23 +153,108 @@ a {
 .task__container {
   overflow: hidden;
   height: 330px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .task__list {
+  /* width: 100%; */
   height: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  /* flex-basis: 300px; */
-  flex-shrink: unset;
+  flex-flow: row nowrap;
   margin: 0px 0px 10px 20px;
 }
 
 .task__list .task__item {
   background-color: white;
   width: 300px;
-  /* margin-right: 10px; */
   height: inherit;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.task__item .task__item-main {
+  padding: 20px 10px;
+  position: relative;
+}
+
+.task__header {
+  position: relative;
+  margin-bottom: 20px;
+}
+.task__header .task-header__title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.task__header .task-header__time {
+  font-size: 10px;
+  font-weight: 700;
+  color: darkgray;
+}
+
+.task__header .task-header__circle {
+  border-radius: 50%;
+  background-color: #01d9c8;
+  border: 10px solid #def6f5;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.task__other {
+  font-size: 13px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  padding: 5px 10px;
+  color: rgb(196, 136, 27);
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    rgba(255, 189, 68, 0.3),
+    rgba(255, 189, 68, 0.1)
+  );
+  display: flex;
+  justify-content: space-between;
+}
+
+.task__item-main .other__list {
+  margin-top: 50px;
+}
+
+.other__list .other__item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.other__item .other__column--clock {
+  color: darkgray;
+}
+
+.other__column .other__circle {
+  color: #01d9c8;
+  font-weight: bold;
+}
+
+.other__column .other__circle--checked {
+  color: orange;
+}
+
+.other__title {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.other__time {
+  display: block;
+  margin-top: 10px;
+  margin-left: 25px;
+  color: darkgray;
 }
