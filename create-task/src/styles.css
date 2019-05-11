@@ -62,8 +62,31 @@ a {
 
 .calendar {
   width: 100%;
-  z-index: 10;
   background-color: white;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+}
+
+.calendar .calendar__container {
+  overflow: hidden;
+}
+
+.calendar .calendar__btn {
+  width: 30px;
+  height: 18px;
+  color: #20d4ca;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -18px;
+  text-align: center;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .days__list {
@@ -122,4 +145,28 @@ a {
 
 .days__item--selected .item__date {
   color: white;
+}
+
+.task__container {
+  overflow: hidden;
+  height: 330px;
+  width: 100%;
+}
+
+.task__list {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  /* flex-basis: 300px; */
+  flex-shrink: unset;
+  margin: 0px 0px 10px 20px;
+}
+
+.task__list .task__item {
+  background-color: white;
+  width: 300px;
+  /* margin-right: 10px; */
+  height: inherit;
 }
